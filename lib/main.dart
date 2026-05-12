@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test_aplication/resources/pages/all_pages.dart';
- 
+import 'package:flutter_test_aplication/resources/theme/theme.dart';
+import './resources/router/rout.dart';
+
 void main() {
   runApp(const MainScreen());
 }
@@ -10,10 +11,10 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: true,
-      showPerformanceOverlay: true,
-      home: LogoPage(),
+      routes: router,
+      theme: thememain,
     );
   }
 }

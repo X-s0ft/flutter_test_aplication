@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
-// 3 Значения source_img, price, name,
-widgetbloce(String source) {
-  final bloc = Text(source);
-  return bloc;
+Container widgetbloce(
+  String sourceimg,
+  double price,
+  String name,
+  String description,
+) {
+  final blocfood = Container();
+  return blocfood;
 }
