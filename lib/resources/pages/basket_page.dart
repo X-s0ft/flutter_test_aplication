@@ -10,6 +10,6 @@ class BasketPage extends StatefulWidget {
 class _BasketPageState extends State<BasketPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text('Корзина')));
+    return const Scaffold(body: Center(child: Text('Корзина')));
   }
 }

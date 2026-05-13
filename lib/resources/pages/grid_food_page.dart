@@ -10,6 +10,6 @@ class GridPage extends StatefulWidget {
 class _GridPageState extends State<GridPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text('Таблица с едой')));
+    return const Scaffold(body: Center(child: Text('Таблица с едой')));
   }
 }
