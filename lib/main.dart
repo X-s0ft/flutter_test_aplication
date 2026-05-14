@@ -3,11 +3,11 @@ import 'package:flutter_test_aplication/resources/theme/theme.dart';
 import './resources/router/rout.dart';
 
 void main() {
-  runApp(const MainScreen());
+  runApp(const MainWidget());
 }
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+class MainWidget extends StatelessWidget {
+  const MainWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

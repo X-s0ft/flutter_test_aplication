@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_aplication/resources/widgets/background.dart';
 
 class GridPage extends StatefulWidget {
   const GridPage({super.key});
@@ -10,6 +11,8 @@ class GridPage extends StatefulWidget {
 class _GridPageState extends State<GridPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: Center(child: Text('Таблица с едой')));
+    return Scaffold(
+      body: BackgroundGradient(Center(child: Text('Главная страница'))),
+    );
   }
 }
