@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test_aplication/resources/widgets/background.dart';
+import '/resources/widgets/all_widgets.dart';
+
 class BasketPage extends StatefulWidget {
   const BasketPage({super.key});
 
@@ -10,6 +11,6 @@ class BasketPage extends StatefulWidget {
 class _BasketPageState extends State<BasketPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: BackgroundGradient(Center(child: Text('Корзина'),)));
+    return Scaffold(body: BackgroundGradient(Center(child: Text('Корзина'))));
   }
 }

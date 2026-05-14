@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test_aplication/resources/widgets/background.dart';
+import '/resources/widgets/all_widgets.dart';
 
 class GridPage extends StatefulWidget {
   const GridPage({super.key});

@@ -3,7 +3,6 @@ import 'package:flutter_test_aplication/resources/theme/theme.dart';
 
 class BackgroundGradient extends StatelessWidget {
   const BackgroundGradient(this.child, {super.key});
-
   final Widget child;
 
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test_aplication/resources/widgets/background.dart';
+import '/resources/widgets/all_widgets.dart';
 
 // TODO: Сделать чтобы эта страница появлялась на 3 секунды и затем перешло на грид
 class LogoPage extends StatelessWidget {
@@ -7,8 +7,6 @@ class LogoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BackgroundGradient(Center(child: Text('Лого'),))
-    );
+    return Scaffold(body: BackgroundGradient(Center(child: Text('Лого'))));
   }
 }
