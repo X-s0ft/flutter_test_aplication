@@ -1,3 +1,3 @@
 # flutter_test_aplication
 
-COSMO delivery
+COSMO delivery - простое визуальное приложение 
