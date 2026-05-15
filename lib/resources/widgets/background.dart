@@ -15,7 +15,7 @@ class BackgroundGradient extends StatelessWidget {
           colors: gradient,
         ),
       ),
-      child: child,
+      child: Center(child: Center(child: child)),
     );
   }
 }

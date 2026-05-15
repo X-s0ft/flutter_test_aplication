@@ -1,5 +1,5 @@
 name: flutter_test_aplication
-description: "A new Flutter project."
+description: "delivery app"
 publish_to: 'none'
 version: 0.1.0+1
 
@@ -17,3 +17,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: SageWold
+      fonts:
+        - asset: lib/resources/theme/fonts/Sagewold-Regular.otf
+        - asset: lib/resources/theme/fonts/Sagewold-Italic.otf
+          style: italic

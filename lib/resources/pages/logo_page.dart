@@ -7,6 +7,30 @@ class LogoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: BackgroundGradient(Center(child: Text('Лого'))));
+    return Scaffold(
+      body: BackgroundGradient(
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          spacing: 20,
+          children: [
+            Image.asset('../web/icons/icon-512.png', width: 120, height: 120),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'COSMO Delivery',
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+                Text(
+                  'made by X-s0ft',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
