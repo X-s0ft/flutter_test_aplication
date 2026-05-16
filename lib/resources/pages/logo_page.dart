@@ -1,9 +1,23 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import '/resources/widgets/all_widgets.dart';
 
-// TODO: Сделать чтобы эта страница появлялась на 3 секунды и затем перешло на грид
-class LogoPage extends StatelessWidget {
+class LogoPage extends StatefulWidget {
   const LogoPage({super.key});
+
+  @override
+  State<LogoPage> createState() => _LogoPageState();
+}
+
+class _LogoPageState extends State<LogoPage> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 3), () {
+      Navigator.of(context).pushNamed('/Grid_food');
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +37,7 @@ class LogoPage extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
                 Text(
-                  'made by X-s0ft',
+                  'Добро пожаловать!',
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
               ],

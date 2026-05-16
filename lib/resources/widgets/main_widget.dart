@@ -9,7 +9,7 @@ class MainWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
-      routes: router,
+      routes: route,
       theme: thememain,
     );
   }
