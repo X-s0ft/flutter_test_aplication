@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import '/resources/widgets/all_widgets.dart';
 
@@ -27,7 +26,11 @@ class _LogoPageState extends State<LogoPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           spacing: 20,
           children: [
-            Image.asset('../web/icons/icon-512.png', width: 120, height: 120),
+            Image.asset(
+              'lib/resources/imgs/logo_img.png',
+              width: 120,
+              height: 120,
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,

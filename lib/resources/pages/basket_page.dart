@@ -11,6 +11,14 @@ class BasketPage extends StatefulWidget {
 class _BasketPageState extends State<BasketPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: BackgroundGradient(Center(child: Text('Корзина'))));
+    return Scaffold(
+      body: BackgroundGradient(Center(child: Text('Корзина'))),
+      floatingActionButton: IconButton(
+        onPressed: () {
+          Navigator.of(context).pop(context);
+        },
+        icon: Icon(Icons.arrow_back, color: Colors.white, size: 45),
+      ),
+    );
   }
 }

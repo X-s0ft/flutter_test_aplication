@@ -17,6 +17,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - lib/resources/imgs/logo_img.png
+    - lib/resources/imgs/error_not_found.jpg
+    - lib/resources/imgs/border_pizza.jpg
   fonts:
     - family: SageWold
       fonts:
