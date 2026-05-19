@@ -35,10 +35,7 @@ class _LogoPageState extends State<LogoPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'COSMO Delivery',
-                  style: Theme.of(context).textTheme.bodyMedium,
-                ),
+                const Text('COSMO Delivery'),
                 Text(
                   'Добро пожаловать!',
                   style: Theme.of(context).textTheme.bodySmall,

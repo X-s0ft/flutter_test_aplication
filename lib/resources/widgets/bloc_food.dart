@@ -2,27 +2,31 @@ import 'package:flutter/material.dart';
 
 class BlocFood extends StatelessWidget {
   const BlocFood(
-    this.sourceimg,
-    this.price,
     this.name,
-    this.description, {
+    this.sourceimg,
+    this.description,
+    this.child,
+    this.price, {
     super.key,
   });
-
-  final String sourceimg;
-  final int price;
   final String name;
+  final String sourceimg;
   final String description;
+  final Widget child;
+  final int price;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       child: Column(
         children: [
-          Text(sourceimg),
           Text(name),
+          Text(sourceimg),
           Text(description),
-          Text('$price руб.'),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [child, Text('$price руб.')],
+          ),
         ],
       ),
     );

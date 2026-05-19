@@ -21,11 +21,23 @@ class _GridPageState extends State<GridPage> {
               Column(children: [Text('Быстрые переходы')]),
               Column(
                 children: [
-                  Text('Пицца'),
-                  BlocFood('../', 41, 'Пеперони', 'Лучшая пицца'),
+                  const Text('Пицца'),
+                  BlocFood(
+                    'Пеперони',
+                    '../',
+                    'Лучшая пицца',
+                    OutlinedButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Добавить',
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                    ),
+                    41,
+                  ),
                 ],
               ),
-              Column(children: [Text('Напитки')]),
+              Column(children: [const Text('Напитки')]),
             ],
           ),
         ),
