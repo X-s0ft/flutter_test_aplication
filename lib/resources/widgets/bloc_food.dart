@@ -21,11 +21,15 @@ class BlocFood extends StatelessWidget {
       child: Column(
         children: [
           Text(name),
-          Text(sourceimg),
+          Image.asset(sourceimg, height: 70, width: 70),
           Text(description),
           Row(
+            spacing: 30,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [child, Text('$price руб.')],
+            children: [
+              child,
+              Text('$price руб.'),
+            ],
           ),
         ],
       ),

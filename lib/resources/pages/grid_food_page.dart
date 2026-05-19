@@ -24,13 +24,13 @@ class _GridPageState extends State<GridPage> {
                   const Text('Пицца'),
                   BlocFood(
                     'Пеперони',
-                    '../',
+                    'lib/resources/imgs/error_not_found.jpg',
                     'Лучшая пицца',
                     OutlinedButton(
                       onPressed: () {},
                       child: Text(
                         'Добавить',
-                        style: Theme.of(context).textTheme.bodyMedium,
+                        style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ),
                     41,

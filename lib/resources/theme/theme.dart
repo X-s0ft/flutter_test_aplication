@@ -14,13 +14,12 @@ final thememain = ThemeData(
   textTheme: TextTheme(
     bodySmall: TextStyle(
       color: textColor,
-      fontSize: 20,
+      fontSize: 25,
       fontFamily: 'SageWold',
-      fontStyle: FontStyle.italic,
     ),
     bodyMedium: TextStyle(
       color: textColor,
-      fontSize: 50,
+      fontSize: 40,
       fontFamily: 'SageWold',
     ),
   ),

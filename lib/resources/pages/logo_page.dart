@@ -14,7 +14,7 @@ class _LogoPageState extends State<LogoPage> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 3), () {
-      Navigator.of(context).pushNamed('/Grid_food');
+      Navigator.of(context).popAndPushNamed('/Grid_food');
     });
   }
 
@@ -38,7 +38,7 @@ class _LogoPageState extends State<LogoPage> {
                 const Text('COSMO Delivery'),
                 Text(
                   'Добро пожаловать!',
-                  style: Theme.of(context).textTheme.bodySmall,
+                  style: Theme.of(context).textTheme.bodySmall, 
                 ),
               ],
             ),
