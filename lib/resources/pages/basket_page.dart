@@ -10,9 +10,24 @@ class BasketPage extends StatefulWidget {
 
 class _BasketPageState extends State<BasketPage> {
   @override
+  void setState(VoidCallback fn) {
+    // TODO: implement setState
+    super.setState(fn);
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BackgroundGradient(Center(child: Text('Корзина'))),
+      body: BackgroundGradient(
+        Center(
+          child: Column(
+            children: [
+              Text('Корзина'),
+              // Scrollbar(child: ListView()),
+            ],
+          ),
+        ),
+      ),
       floatingActionButton: IconButton(
         onPressed: () {
           Navigator.of(context).pop(context);

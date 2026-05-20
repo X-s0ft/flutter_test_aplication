@@ -5,31 +5,39 @@ class BlocFood extends StatelessWidget {
     this.name,
     this.sourceimg,
     this.description,
-    this.child,
+    this.childbutton,
     this.price, {
     super.key,
   });
+
   final String name;
   final String sourceimg;
   final String description;
-  final Widget child;
+  final Widget childbutton;
   final int price;
 
   @override
   Widget build(BuildContext context) {
+    // TODO: Украсти блок обводкой, задним фоном и тенью
     return SizedBox(
+      width: 250,
       child: Column(
         children: [
           Text(name),
-          Image.asset(sourceimg, height: 70, width: 70),
-          Text(description),
+          Image.asset(
+            sourceimg,
+            height: 120,
+            width: 120,
+          ), // TODO: Сделать проверку на наличие изображения
+          Text(
+            description,
+            softWrap: true,
+            style: Theme.of(context).textTheme.bodySmall,
+          ),
           Row(
             spacing: 30,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              child,
-              Text('$price руб.'),
-            ],
+            children: [childbutton, Text('$price руб.')],
           ),
         ],
       ),

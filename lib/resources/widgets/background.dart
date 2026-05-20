@@ -8,6 +8,7 @@ class BackgroundGradient extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: AlignmentGeometry.topLeft,
@@ -15,7 +16,7 @@ class BackgroundGradient extends StatelessWidget {
           colors: gradient,
         ),
       ),
-      child: Center(child: Center(child: child)),
+      child: Center(child: child),
     );
   }
 }

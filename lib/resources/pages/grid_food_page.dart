@@ -13,32 +13,86 @@ class _GridPageState extends State<GridPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BackgroundGradient(
-        Container(
-          padding: EdgeInsets.all(25),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Column(children: [Text('Быстрые переходы')]),
-              Column(
-                children: [
-                  const Text('Пицца'),
-                  BlocFood(
-                    'Пеперони',
-                    'lib/resources/imgs/error_not_found.jpg',
-                    'Лучшая пицца',
-                    OutlinedButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Добавить',
-                        style: Theme.of(context).textTheme.bodySmall,
+        SizedBox(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const Text(
+                  'Пицца',
+                ), // TODO: Сделать задний фон для текста в виде изображения
+                SizedBox(
+                  //
+                  child: Wrap(
+                    spacing: 20,
+                    children: [
+                      BlocFood(
+                        'Пеперони',
+                        'lib/resources/imgs/error_not_found.jpg',
+                        'Лучшая пиццаааааааааааааааааааааааааааааааааааааааааааааааа',
+                        OutlinedButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Добавить',
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                        ),
+                        41,
                       ),
-                    ),
-                    41,
+                      BlocFood(
+                        'Пеперони',
+                        'lib/resources/imgs/error_not_found.jpg',
+                        'Лучшая пиццаааааааааааааааааааааааааааааааааааааааааааааааа',
+                        OutlinedButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Добавить',
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                        ),
+                        41,
+                      ),
+                      BlocFood(
+                        'Пеперони',
+                        'lib/resources/imgs/error_not_found.jpg',
+                        'Лучшая пиццаааааааааааааааааааааааааааааааааааааааааааааааа',
+                        OutlinedButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Добавить',
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                        ),
+                        41,
+                      ),
+                      BlocFood(
+                        'Пеперони',
+                        'lib/resources/imgs/error_not_found.jpg',
+                        'Лучшая пиццаааааааааааааааааааааааааааааааааааааааааааааааа',
+                        OutlinedButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Добавить',
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                        ),
+                        41,
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              Column(children: [const Text('Напитки')]),
-            ],
+                ),
+
+                //TODO: Добавить несколько напитков
+                Column(
+                  children: [
+                    const Text(
+                      'Напитки',
+                    ), // TODO: Сделать задний фон для текста в виде изображения
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
