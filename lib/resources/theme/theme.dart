@@ -10,7 +10,7 @@ List<Color> gradient = [colorSirenDarker, colorPurpl, colorSiren];
 // Тема приложения
 
 final thememain = ThemeData(
-  // TODO: Добалять по мере создания
+  // TODO: Добавлять по мере создания
   textTheme: TextTheme(
     bodySmall: TextStyle(
       color: textColor,
@@ -21,6 +21,19 @@ final thememain = ThemeData(
       color: textColor,
       fontSize: 40,
       fontFamily: 'SageWold',
+    ),
+  ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: OutlinedButton.styleFrom(
+      foregroundColor: colorSiren,
+      shadowColor: colorSirenDarker,
+      backgroundColor: Colors.white,
+      textStyle: TextStyle(
+        color: colorPurpl,
+        fontSize: 25,
+        fontFamily: 'SageWold',
+        fontStyle: FontStyle.italic,
+      ),
     ),
   ),
 );

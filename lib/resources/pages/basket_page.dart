@@ -23,7 +23,6 @@ class _BasketPageState extends State<BasketPage> {
           child: Column(
             children: [
               Text('Корзина'),
-              // Scrollbar(child: ListView()),
             ],
           ),
         ),

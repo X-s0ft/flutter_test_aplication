@@ -25,7 +25,9 @@ class BlocFood extends StatelessWidget {
         children: [
           Text(name),
           Image.asset(
-            sourceimg,
+            sourceimg.isEmpty
+                ? "lib/resources/imgs/error_not_found.jpg"
+                : sourceimg,
             height: 120,
             width: 120,
           ), // TODO: Сделать проверку на наличие изображения

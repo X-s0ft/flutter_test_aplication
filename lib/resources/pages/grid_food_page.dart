@@ -13,30 +13,45 @@ class _GridPageState extends State<GridPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BackgroundGradient(
-        SizedBox(
+        Container(
+          padding: EdgeInsets.all(30),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const Text(
-                  'Пицца',
-                ), // TODO: Сделать задний фон для текста в виде изображения
+                const Text('Пицца'),
                 SizedBox(
-                  //
                   child: Wrap(
                     spacing: 20,
                     children: [
                       BlocFood(
                         'Пеперони',
-                        'lib/resources/imgs/error_not_found.jpg',
+                        '',
                         'Лучшая пиццаааааааааааааааааааааааааааааааааааааааааааааааа',
                         OutlinedButton(
                           onPressed: () {},
-                          child: Text(
-                            'Добавить',
-                            style: Theme.of(context).textTheme.bodySmall,
-                          ),
+                          child: Text('Добавить'),
+                        ),
+                        41,
+                      ),
+                      BlocFood(
+                        'Пеперони',
+                        '',
+                        'Лучшая пиццаааааааааааааааааааааааааааааааааааааааааааааааа',
+                        OutlinedButton(
+                          onPressed: () {},
+                          child: Text('Добавить'),
+                        ),
+                        41,
+                      ),
+                      BlocFood(
+                        'Пеперони',
+                        '',
+                        'Лучшая пиццаааааааааааааааааааааааааааааааааааааааааааааааа',
+                        OutlinedButton(
+                          onPressed: () {},
+                          child: Text('Добавить'),
                         ),
                         41,
                       ),
@@ -46,36 +61,7 @@ class _GridPageState extends State<GridPage> {
                         'Лучшая пиццаааааааааааааааааааааааааааааааааааааааааааааааа',
                         OutlinedButton(
                           onPressed: () {},
-                          child: Text(
-                            'Добавить',
-                            style: Theme.of(context).textTheme.bodySmall,
-                          ),
-                        ),
-                        41,
-                      ),
-                      BlocFood(
-                        'Пеперони',
-                        'lib/resources/imgs/error_not_found.jpg',
-                        'Лучшая пиццаааааааааааааааааааааааааааааааааааааааааааааааа',
-                        OutlinedButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Добавить',
-                            style: Theme.of(context).textTheme.bodySmall,
-                          ),
-                        ),
-                        41,
-                      ),
-                      BlocFood(
-                        'Пеперони',
-                        'lib/resources/imgs/error_not_found.jpg',
-                        'Лучшая пиццаааааааааааааааааааааааааааааааааааааааааааааааа',
-                        OutlinedButton(
-                          onPressed: () {},
-                          child: Text(
-                            'Добавить',
-                            style: Theme.of(context).textTheme.bodySmall,
-                          ),
+                          child: Text('Добавить'),
                         ),
                         41,
                       ),
@@ -86,9 +72,44 @@ class _GridPageState extends State<GridPage> {
                 //TODO: Добавить несколько напитков
                 Column(
                   children: [
-                    const Text(
-                      'Напитки',
-                    ), // TODO: Сделать задний фон для текста в виде изображения
+                    const Text('Напитки'),
+                    SizedBox(
+                      child: Wrap(
+                        spacing: 20,
+                        children: [
+                          BlocFood(
+                            'Sprite',
+                            '',
+                            '',
+                            OutlinedButton(
+                              onPressed: () {},
+                              child: Text('Добавить'),
+                            ),
+                            9,
+                          ),
+                          BlocFood(
+                            'Fanta',
+                            '',
+                            '',
+                            OutlinedButton(
+                              onPressed: () {},
+                              child: Text('Добавить'),
+                            ),
+                            9,
+                          ),
+                          BlocFood(
+                            '7-up',
+                            '',
+                            '',
+                            OutlinedButton(
+                              onPressed: () {},
+                              child: Text('Добавить'),
+                            ),
+                            9,
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ],
