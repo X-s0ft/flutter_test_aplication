@@ -13,106 +13,122 @@ class _GridPageState extends State<GridPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BackgroundGradient(
-        Container(
-          padding: EdgeInsets.all(30),
+        SizedBox(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: SingleChildScrollView(
-            child: Column(
-              children: [
-                const Text('Пицца'),
-                SizedBox(
-                  child: Wrap(
-                    spacing: 20,
-                    children: [
-                      BlocFood(
-                        'Пеперони',
-                        '',
-                        'Лучшая пиццаааааааааааааааааааааааааааааааааааааааааааааааа',
-                        OutlinedButton(
-                          onPressed: () {},
-                          child: Text('Добавить'),
-                        ),
-                        41,
-                      ),
-                      BlocFood(
-                        'Пеперони',
-                        '',
-                        'Лучшая пиццаааааааааааааааааааааааааааааааааааааааааааааааа',
-                        OutlinedButton(
-                          onPressed: () {},
-                          child: Text('Добавить'),
-                        ),
-                        41,
-                      ),
-                      BlocFood(
-                        'Пеперони',
-                        '',
-                        'Лучшая пиццаааааааааааааааааааааааааааааааааааааааааааааааа',
-                        OutlinedButton(
-                          onPressed: () {},
-                          child: Text('Добавить'),
-                        ),
-                        41,
-                      ),
-                      BlocFood(
-                        'Пеперони',
-                        'lib/resources/imgs/error_not_found.jpg',
-                        'Лучшая пиццаааааааааааааааааааааааааааааааааааааааааааааааа',
-                        OutlinedButton(
-                          onPressed: () {},
-                          child: Text('Добавить'),
-                        ),
-                        41,
-                      ),
-                    ],
-                  ),
-                ),
-
-                //TODO: Добавить несколько напитков
-                Column(
-                  children: [
-                    const Text('Напитки'),
-                    SizedBox(
-                      child: Wrap(
-                        spacing: 20,
-                        children: [
-                          BlocFood(
-                            'Sprite',
-                            '',
-                            '',
-                            OutlinedButton(
-                              onPressed: () {},
-                              child: Text('Добавить'),
-                            ),
-                            9,
+            child: Container(
+              margin: EdgeInsets.all(25),
+              child: Column(
+                spacing: 20,
+                children: [
+                  const Text('Пицца'),
+                  // Container(
+                  //   padding: EdgeInsets.all(10),
+                  //   width: MediaQuery.of(context).size.width,
+                  //   height: 200,
+                  //   alignment: Alignment.centerLeft,
+                  //   decoration: BoxDecoration(
+                  //     image: DecorationImage(
+                  //       image: ExactAssetImage(
+                  //         'lib/resources/imgs/border_pizza.jpg',
+                  //       ),
+                  //     ),
+                  //   ),
+                  //   child: Text(
+                  //     'Пицца',
+                  //     style: Theme.of(context).textTheme.bodyLarge,
+                  //   ),
+                  // ),
+                  SizedBox(
+                    child: Wrap(
+                      spacing: 20,
+                      runSpacing: 25,
+                      children: [
+                        BlocFood(
+                          'Пеперони',
+                          '',
+                          'Лучшая пиццааааааааааааааааааааааааааааааааааааааааааааааа',
+                          OutlinedButton(
+                            onPressed: null,
+                            child: Text('Добавить'),
                           ),
-                          BlocFood(
-                            'Fanta',
-                            '',
-                            '',
-                            OutlinedButton(
-                              onPressed: () {},
-                              child: Text('Добавить'),
-                            ),
-                            9,
+                          41,
+                        ),
+                        BlocFood(
+                          'Пеперони',
+                          '',
+                          'Лучшая пиццааааааааааааааааааааааааааааааааааааааааааааааа',
+                          OutlinedButton(
+                            onPressed: null,
+                            child: Text('Добавить'),
                           ),
-                          BlocFood(
-                            '7-up',
-                            '',
-                            '',
-                            OutlinedButton(
-                              onPressed: () {},
-                              child: Text('Добавить'),
-                            ),
-                            9,
+                          41,
+                        ),
+                        BlocFood(
+                          'Пеперони',
+                          '',
+                          'Лучшая пиццааааааааааааааааааааааааааааааааааааааааааааааа',
+                          OutlinedButton(
+                            onPressed: null,
+                            child: Text('Добавить'),
                           ),
-                        ],
-                      ),
+                          41,
+                        ),
+                        BlocFood(
+                          'Пеперони',
+                          'lib/resources/imgs/error_not_found.jpg',
+                          'Лучшая пиццааааааааааааааааааааааааааааааааааааааааааааааа',
+                          OutlinedButton(
+                            onPressed: null,
+                            child: Text('Добавить'),
+                          ),
+                          41,
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-              ],
+                  ),
+                  const Text('Напитки'),
+                  SizedBox(
+                    child: Wrap(
+                      spacing: 20,
+                      runSpacing: 25,
+                      children: [
+                        BlocFood(
+                          'Sprite',
+                          '',
+                          'Sprite',
+                          OutlinedButton(
+                            onPressed: null,
+                            child: Text('Добавить'),
+                          ),
+                          9,
+                        ),
+                        BlocFood(
+                          'Fanta',
+                          '',
+                          'Fanta',
+                          OutlinedButton(
+                            onPressed: null,
+                            child: Text('Добавить'),
+                          ),
+                          9,
+                        ),
+                        BlocFood(
+                          '7-up',
+                          '',
+                          '7-up',
+                          OutlinedButton(
+                            onPressed: null,
+                            child: Text('Добавить'),
+                          ),
+                          9,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

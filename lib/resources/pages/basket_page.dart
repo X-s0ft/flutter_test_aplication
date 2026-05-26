@@ -19,10 +19,17 @@ class _BasketPageState extends State<BasketPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BackgroundGradient(
-        Center(
+        Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          padding: EdgeInsets.all(35),
           child: Column(
             children: [
               Text('Корзина'),
+              // TODO: List с перечнем добавленных товаров с прошлой страницы
+              // ListView(),
+              OutlinedButton(onPressed: null, child: Text('Заказать'))
+              // TODO: Добавить карту куда доставить
             ],
           ),
         ),

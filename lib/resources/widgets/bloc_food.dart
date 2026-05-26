@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme/theme.dart';
 
 class BlocFood extends StatelessWidget {
   const BlocFood(
@@ -18,8 +19,16 @@ class BlocFood extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: Украсти блок обводкой, задним фоном и тенью
-    return SizedBox(
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: AlignmentGeometry.topRight,
+          end: AlignmentGeometry.bottomLeft,
+          colors: gradient,
+        ),
+        boxShadow: const [BoxShadow(blurRadius: 5)],
+        borderRadius: BorderRadius.circular(10),
+      ),
       width: 250,
       child: Column(
         children: [
@@ -30,11 +39,14 @@ class BlocFood extends StatelessWidget {
                 : sourceimg,
             height: 120,
             width: 120,
-          ), // TODO: Сделать проверку на наличие изображения
-          Text(
-            description,
-            softWrap: true,
-            style: Theme.of(context).textTheme.bodySmall,
+          ),
+          Container(
+            padding: EdgeInsets.all(10),
+            child: Text(
+              description,
+              softWrap: true,
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
           ),
           Row(
             spacing: 30,
