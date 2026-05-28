@@ -18,11 +18,14 @@ final thememain = ThemeData(
     ),
     bodyMedium: TextStyle(
       color: textColor,
-      fontSize: 40,
+      fontSize: 35,
       fontFamily: 'SageWold',
     ),
-    // TODO: Добавить стиль для bodyLarge
-    bodyLarge: TextStyle()
+    bodyLarge: TextStyle(
+      color: textColor,
+      fontSize: 50,
+      fontFamily: 'SageWold',
+    ),
   ),
   outlinedButtonTheme: OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(

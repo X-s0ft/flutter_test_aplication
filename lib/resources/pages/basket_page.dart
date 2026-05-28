@@ -25,10 +25,10 @@ class _BasketPageState extends State<BasketPage> {
           padding: EdgeInsets.all(35),
           child: Column(
             children: [
-              Text('Корзина'),
+              Text('Корзина', style: Theme.of(context).textTheme.bodyLarge),
               // TODO: List с перечнем добавленных товаров с прошлой страницы
               // ListView(),
-              OutlinedButton(onPressed: null, child: Text('Заказать'))
+              OutlinedButton(onPressed: null, child: Text('Заказать')),
               // TODO: Добавить карту куда доставить
             ],
           ),

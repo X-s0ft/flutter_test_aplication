@@ -33,19 +33,22 @@ class BlocFood extends StatelessWidget {
       child: Column(
         children: [
           Text(name),
-          Image.asset(
-            sourceimg.isEmpty
-                ? "lib/resources/imgs/error_not_found.jpg"
-                : sourceimg,
-            height: 120,
-            width: 120,
-          ),
           Container(
             padding: EdgeInsets.all(10),
-            child: Text(
-              description,
-              softWrap: true,
-              style: Theme.of(context).textTheme.bodySmall,
+            child: Column(
+              spacing: 10,
+              children: [
+                Image.asset(
+                  sourceimg.isEmpty
+                      ? "lib/resources/imgs/error_not_found.jpg"
+                      : sourceimg,
+                ),
+                Text(
+                  description,
+                  softWrap: true,
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+              ],
             ),
           ),
           Row(

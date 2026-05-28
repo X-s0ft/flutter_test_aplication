@@ -22,24 +22,26 @@ class _GridPageState extends State<GridPage> {
               child: Column(
                 spacing: 20,
                 children: [
-                  const Text('Пицца'),
-                  // Container(
-                  //   padding: EdgeInsets.all(10),
-                  //   width: MediaQuery.of(context).size.width,
-                  //   height: 200,
-                  //   alignment: Alignment.centerLeft,
-                  //   decoration: BoxDecoration(
-                  //     image: DecorationImage(
-                  //       image: ExactAssetImage(
-                  //         'lib/resources/imgs/border_pizza.jpg',
-                  //       ),
-                  //     ),
-                  //   ),
-                  //   child: Text(
-                  //     'Пицца',
-                  //     style: Theme.of(context).textTheme.bodyLarge,
-                  //   ),
-                  // ),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                    height: 200,
+                    child: CarouselView(
+                      itemExtent: 200,
+                      shrinkExtent: 150,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadiusGeometry.circular(10),
+                      ),
+                      itemSnapping: true,
+                      children: [
+                        Image.asset('lib/resources/imgs/border_pizza.jpg'),
+                        Image.asset('lib/resources/imgs/border_pizza.jpg'),
+                        Image.asset('lib/resources/imgs/border_pizza.jpg'),
+                      ],
+                    ),
+                  ),
+                  //TODO: добавить автоматически переключающиеся банера (мин 3 шт)
+                  Text('Пицца', style: Theme.of(context).textTheme.bodyLarge),
                   SizedBox(
                     child: Wrap(
                       spacing: 20,
@@ -88,7 +90,7 @@ class _GridPageState extends State<GridPage> {
                       ],
                     ),
                   ),
-                  const Text('Напитки'),
+                  Text('Напитки', style: Theme.of(context).textTheme.bodyLarge),
                   SizedBox(
                     child: Wrap(
                       spacing: 20,
