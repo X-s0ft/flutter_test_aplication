@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import '/resources/widgets/all_widgets.dart';
 
@@ -9,6 +10,12 @@ class GridPage extends StatefulWidget {
 }
 
 class _GridPageState extends State<GridPage> {
+  List<String> img_dir = [
+    'lib/resources/imgs/Border_pizza.jpg',
+    'lib/resources/imgs/Border_pizza.jpg',
+    'lib/resources/imgs/Border_pizza.jpg',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,24 +30,28 @@ class _GridPageState extends State<GridPage> {
                 spacing: 20,
                 children: [
                   Container(
-                    width: MediaQuery.of(context).size.width,
+                    // width: MediaQuery.of(context).size.width,
                     margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                    height: 200,
-                    child: CarouselView(
-                      itemExtent: 200,
-                      shrinkExtent: 150,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadiusGeometry.circular(10),
-                      ),
-                      itemSnapping: true,
-                      children: [
-                        Image.asset('lib/resources/imgs/border_pizza.jpg'),
-                        Image.asset('lib/resources/imgs/border_pizza.jpg'),
-                        Image.asset('lib/resources/imgs/border_pizza.jpg'),
-                      ],
+                    height: 190,
+                    child: CarouselSlider(
+                      items: img_dir
+                          .map(
+                            (item) => Container(
+                              margin: EdgeInsets.all(5),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                image: DecorationImage(
+                                  image: AssetImage(item),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          )
+                          .toList(),
+                      // TODO: дописать Otions
+                      options: CarouselOptions(),
                     ),
                   ),
-                  //TODO: добавить автоматически переключающиеся банера (мин 3 шт)
                   Text('Пицца', style: Theme.of(context).textTheme.bodyLarge),
                   SizedBox(
                     child: Wrap(
